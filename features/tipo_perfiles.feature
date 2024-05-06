@@ -14,12 +14,12 @@ Example: En el que el usuario no puede ver la opción para seleccionar su tipo d
 Example: En el que la aplicación ofrece la opción de perfil conductor
     Given estoy en la pantalla de resgistrarse en la aplicación
     When veo la opcion de perfil usuario conductor
-    then se muestra la opcion de perfil usuario conductor
+    Then se muestra la opcion de perfil usuario conductor
 
 Example: En el que la aplicación ofrece la opción de perfil pasajero
     Given estoy en la pantalla de resgistrarse en la aplicación
     When veo la opcion de perfil usuario pasajero
-    then se muestra la opcion de perfil usuario pasajero
+    Then se muestra la opcion de perfil usuario pasajero
 
 Example: En el que el usuario selecciona la opción de perfil conductor
     Given estoy en la pantalla de resgistrarse en la aplicación
