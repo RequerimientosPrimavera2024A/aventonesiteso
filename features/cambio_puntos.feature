@@ -3,22 +3,22 @@ Feature: Como un usuario de la aplicación "Aventones ITESO" que ha acumulado pu
 
 Example: En el que el usuario puede acceder a la sección de catálogo de productos
     Given estoy en el incio de la aplicación AventonesITESO
-    When doy clic en "Catalogo de productos" 
+    When doy clic en Catalogo de productos
     Then visualiza el catalogo de productos
 
 Example: En el que el usuario puede acceder a la sección de los descuentos desde la aplicación
     Given estoy en el incio de la aplicación AventonesITESO
-    When doy clic en "Catalogo de descuentos" 
+    When doy clic en Catalogo de descuentos
     Then visualiza el catalogo de descuentos
 
 Example: En el que la aplicación muestra el catálogo de los negocios del ITESO participantes en el programa de canje de puntos
     Given estoy en la pantalla del catalogo de descuentos
-    When doy clic en "Catalogo de descuentos"
+    When doy clic en Catalogo de descuentos
     Then visualiza el catálogo de los negocios del ITESO participantes en el programa de canje de puntos
 
 Example: En el que la aplicación no muestra el catálogo de los negocios del ITESO participantes en el programa de canje de puntos
     Given estoy en la pantalla del catalogo de descuentos
-    When doy clic en "Catalogo de descuentos"
+    When doy clic en Catalogo de descuentos
     Then no visualiza el catálogo de los negocios del ITESO participantes en el programa de canje de puntos
 
 Example: En el que la aplicación muestra para cada negocio, el catálogo de los productos
@@ -34,9 +34,34 @@ Example: En el que la aplicación muestra para cada negocio, el catálogo de los
 Example: En el que la aplicación muestra de cada producto incluyendo información sobre su nombre, descripción, cantidad de puntos necesarios para canjearlo y ubicación del negocio.
     Given estoy en la página de detalles del negocio
     When veo información de cada producto sobre su nombre, descripción, cantidad de puntos necesarios para canjearlo y ubicación del negocio
-    Then visualiza los productos con la información sobre su nombre, descripción, cantidad de puntos necesarios para canjearlo y ubicación del negocio.
+    Then visualiza los productos con la información sobre su nombre, descripción, cantidad de puntos necesarios para canjearlo y ubicación del negocio
 
 Example: En el que la aplicación muestra de cada descuento de producto incluyendo información sobre su nombre, descripción, cantidad de puntos necesarios para canjearlo y ubicación del negocio.
     Given estoy en la página de detalles del negocio
     When veo información de cada descuento de producto sobre su nombre, descripción, cantidad de puntos necesarios para canjearlo y ubicación del negocio
-    Then visualiza los descuentos de productos con la información sobre su nombre, descripción, cantidad de puntos necesarios para canjearlo y ubicación del negocio.
+    Then visualiza los descuentos de productos con la información sobre su nombre, descripción, cantidad de puntos necesarios para canjearlo y ubicación del negocio
+
+Example: En el que el usuario puede filtrar el catálogo por tipo de negocio
+    Given estoy en la pantalla principal del catalogo
+    When doy click en filtrar tipo de negocio
+    Then visualiza solo los resultados correspondientes al tipo de negocio seleccionado
+
+Example: En el que el usuario puede filtrar el catálogo por tipo de categoría de producto
+    Given estoy en la pantalla principal del catalogo
+    When doy click en filtrar tipo de categoría de producto
+    Then visualiza solo los resultados correspondientes al tipo de categoría de producto seleccionado
+
+Example: En el que el usuario puede filtrar el catálogo por tipo de descuento de producto
+    Given estoy en la pantalla principal del catalogo
+    When doy click en filtrar tipo de descuento de producto
+    Then visualiza solo los resultados correspondientes al tipo de descuento de producto seleccionado
+
+Example: En el que el usuario puede seleccionar un producto para ver información detallada
+    Given estoy en la pantalla filtrada del catalogo
+    When doy click en ver mas del producto
+    Then visualiza la informacion detallada del producto
+
+Example: En el que el usuario puede seleccionar un descuento para ver información detallada
+    Given estoy en la pantalla filtrada del catalogo
+    When doy click en ver mas del descuento
+    Then visualiza la informacion detallada del descuento
